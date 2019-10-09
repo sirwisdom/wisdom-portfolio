@@ -1,0 +1,111 @@
+.menu-div {
+  position: fixed;
+  top: 10px;
+  right: 40px;
+  font-size: 2em;
+  color: $tertiaryColor;
+  cursor: pointer;
+  z-index: 1000;
+  padding: 2px;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  height: 30vh;
+}
+
+.menu {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  opacity: 0.98;
+  visibility: hidden;
+  z-index: 100;
+
+  &.show {
+    visibility: visible;
+  }
+
+  &-branding,
+  &-nav {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 50%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  &-nav {
+    margin: 0;
+    padding: 0;
+    background: darken($primaryColor, 5);
+    list-style-type: none;
+    transform: translate3d(0, -100%, 0);
+    @include easeOut();
+
+    &.show {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  &-branding {
+    margin: 0;
+    padding: 0;
+    background: lighten($primaryColor, 1);
+    transform: translate3d(0, 100%, 0);
+    @include easeOut();
+
+    &.show {
+      transform: translate3d(0, 0, 0);
+    }
+
+    .portrait {
+      width: 250px;
+      height: 250px;
+      background: url(../images/pic.jpg);
+      border: 3px solid $tertiaryColor;
+      border-radius: 50%;
+      background-size: cover;
+    }
+  }
+  .nav-item {
+    transform: translate3d(600px, 0, 0);
+    @include easeOut();
+
+    &.show {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  .nav-item {
+    font-size: 1.5rem;
+    font-weight: 300;
+    padding: 1rem 1rem;
+    text-transform: uppercase;
+
+    a {
+      color: $tertiaryColor;
+      @include easeOut();
+
+      &:hover {
+        color: $secondaryColor;
+      }
+    }
+
+    i {
+      margin-right: 5px;
+    }
+  }
+}
+
+// Delay each Nav Items slide by 0.2s
+@for $x from 1 through 4 {
+  .nav-item:nth-child(#{$x}) {
+    transition-delay: $x * 0.2s;
+  }
+}

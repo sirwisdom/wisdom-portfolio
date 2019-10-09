@@ -1,0 +1,34 @@
+$primaryColor: #011b3b;
+$secondaryColor: #e7ebf4;
+$tertiaryColor: #4bb7e6;
+$backgroundOpacity: 0.95;
+
+@mixin easeOut() {
+  transition: all 0.5s ease-out;
+}
+
+// Media Querries mixin
+
+@mixin MediaSm {
+  @media screen and (max-width: 500px) {
+    @content;
+  }
+}
+
+@mixin MediaMd {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin MediaLg {
+  @media screen and (min-width: 769px) and (max-width: 1170px) {
+    @content;
+  }
+}
+
+@mixin MediaXl {
+  @media screen and (min-width: 1170px) {
+    @content;
+  }
+}

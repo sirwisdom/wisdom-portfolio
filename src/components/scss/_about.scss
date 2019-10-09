@@ -1,0 +1,57 @@
+.about-section {
+  margin-top: 5vh;
+  h1 {
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-weight: 400;
+    margin: 1px;
+    padding: 2px;
+  }
+  h3 {
+    margin-bottom: 7px;
+    padding: 3px 5px;
+  }
+
+  .about-div {
+    margin-top: 5px;
+    display: grid;
+    grid-template-areas: "about-portrait bio bio" "work01 work02 work03";
+    grid-template-columns: repeat(3, 1fr);
+
+    .about-portrait {
+      grid-area: about-portrait;
+      margin: auto;
+      .bio-image {
+        margin: auto;
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        border: 3px solid $tertiaryColor;
+      }
+    }
+    .bio {
+      grid-area: bio;
+      font-size: 1.1rem;
+    }
+    #work01 {
+      grid-area: work01;
+    }
+    #work02 {
+      grid-area: work02;
+    }
+    #work03 {
+      grid-area: work03;
+    }
+  }
+}
+
+.work {
+  padding: 5px;
+  margin: 2px;
+  background: lighten($color: $primaryColor, $amount: 1);
+  h5 {
+    font-size: 20px;
+    font-weight: 200px;
+    color: $tertiaryColor;
+  }
+}

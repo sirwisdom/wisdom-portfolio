@@ -1,33 +1,47 @@
 // Wide Screens
 @include MediaXl {
+  //portfolio page
+  .project-div {
+    grid-template-columns: repeat(4, 1fr);
+    width: 95%;
+    margin: 0 auto;
+
+    .project {
+      padding: 10px;
+      margin-bottom: 4px;
+      border-bottom: none;
+    }
+  }
 }
 
 // Desktops and Laptops
 @include MediaLg {
+  //portfolio page
+  .project-div {
+    grid-template-columns: repeat(4, 1fr);
+    width: 95%;
+    margin: 0 auto;
+
+    .project {
+      padding: 10px;
+      margin-bottom: 4px;
+      border-bottom: none;
+    }
+  }
 }
 
 // Tablets and Small Laptops
 @include MediaMd {
   main {
     text-align: center;
-
-    .icons {
-      margin-top: 24px;
-    }
   }
   .sm-heading {
     margin-bottom: 17px;
   }
   h1,
-  h3 {
-    margin-bottom: 10px;
-    color: darken($color: $secondaryColor, $amount: 5);
-  }
-
   .menu-branding,
   .menu-nav {
     flex-direction: column;
-
     float: none;
     width: 100%;
     overflow: hidden;
@@ -49,11 +63,84 @@
       transform: translate3d(0, 0, 0);
     }
   }
+
+  // About page
+
+  .about-div {
+    grid-template-areas: "bio-image" "bio" "work01" "work02" "work03";
+    grid-template-columns: 1fr;
+  }
+
+  //portfolio page
+  .project-div {
+    grid-template-columns: repeat(2, 1fr);
+    width: 95%;
+    margin: 0 auto;
+
+    .project {
+      padding: 10px;
+      margin-bottom: 4px;
+      border-bottom: 2px solid $tertiaryColor;
+    }
+  }
+
+  // Navbar styles
+
+  .menu {
+    &.show {
+      visibility: visible;
+    }
+
+    &-branding,
+    &-nav {
+    }
+    &-nav {
+      &.show {
+        transform: translate3d(0, 0, 0);
+      }
+    }
+
+    &-branding {
+      &.show {
+        transform: translate3d(0, 0, 0);
+      }
+
+      .portrait {
+        width: 150px;
+        height: 150px;
+        background: url(../images/profile-small.jpg);
+        border: 3px solid $tertiaryColor;
+        border-radius: 50%;
+        background-size: cover;
+      }
+    }
+
+    .nav-item {
+      font-size: 1.5rem;
+      font-weight: 300;
+      padding: 1rem 1rem;
+      text-transform: uppercase;
+    }
+  }
 }
 
 // Smart Phones
 @include MediaSm {
-  .sm-heading {
-    font-size: 14px;
+  .about-div {
+    grid-template-areas: "bio-image" "bio" "work01" "work02" "work03";
+    grid-template-columns: 1fr;
+  }
+
+  //portfolio page
+  .project-div {
+    grid-template-columns: 1fr;
+    width: 90%;
+    margin: 0 auto;
+
+    .project {
+      padding: 10px;
+      margin-bottom: 4px;
+      border-bottom: 2px solid $tertiaryColor;
+    }
   }
 }

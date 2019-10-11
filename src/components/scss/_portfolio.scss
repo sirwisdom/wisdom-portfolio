@@ -1,0 +1,45 @@
+.portfolio-section {
+  min-height: 100vh - 40vh;
+  h1 {
+    text-transform: uppercase;
+    font-size: 2.6rem;
+    font-weight: 400;
+    margin-top: 15vh;
+    padding: 5px;
+  }
+
+  h3 {
+    text-transform: capitalize;
+    font-size: 1.3rem;
+    font-weight: 400;
+    padding: 5px;
+  }
+}
+
+.project-div {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  min-height: 100vh - 40vh;
+
+  .project {
+    padding: 0;
+    // border: 2px solid rgba($tertiaryColor, 0.3);
+    a {
+      display: block;
+      background: #fff;
+      color: $primaryColor;
+      font-weight: 600;
+      padding: 5px 5px;
+    }
+    .github-links {
+      background: darken($primaryColor, 5);
+      color: $tertiaryColor;
+      margin-top: 3px;
+    }
+    img {
+      margin: 3px;
+      width: 100%;
+    }
+  }
+}

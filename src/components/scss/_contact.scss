@@ -1,18 +1,15 @@
 .contact-section {
   margin-top: 15vh;
   height: 100vh - 20vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex-wrap: wrap;
-  overflow: hidden;
 
   h1 {
     font-size: 3rem;
     text-transform: uppercase;
+    margin-left: 10px;
   }
   p {
-    font-size: 24px;
+    font-size: 18px;
+    margin-left: 10px;
   }
 }
 
@@ -23,8 +20,27 @@
   flex-wrap: wrap;
 
   .contact {
-    padding: 1.3rem 1rem;
+    padding: 0.7rem;
     margin: 5px;
     border: 2px solid $tertiaryColor;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: px) {
+  .contact-section {
+    margin-top: 15vh;
+    height: 100vh - 20vh;
+
+    h1 {
+      font-size: 2rem;
+      text-transform: uppercase;
+      margin-left: 10px;
+      text-align: center;
+    }
+    p {
+      font-size: 14px;
+      margin-left: 10px;
+      text-align: center;
+    }
   }
 }

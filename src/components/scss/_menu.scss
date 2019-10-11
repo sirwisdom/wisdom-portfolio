@@ -1,7 +1,7 @@
 .menu-div {
   position: fixed;
   top: 10px;
-  right: 40px;
+  right: 20px;
   font-size: 2em;
   color: $tertiaryColor;
   cursor: pointer;
@@ -67,7 +67,7 @@ header {
     .portrait {
       width: 250px;
       height: 250px;
-      background: url(../images/pic.jpg);
+      background: url(../images/profile.jpg);
       border: 3px solid $tertiaryColor;
       border-radius: 50%;
       background-size: cover;
@@ -103,9 +103,9 @@ header {
   }
 }
 
-// Delay each Nav Items slide by 0.2s
+// Delay each Nav Items slide by 0.1s
 @for $x from 1 through 4 {
   .nav-item:nth-child(#{$x}) {
-    transition-delay: $x * 0.2s;
+    transition-delay: $x * 0.1s;
   }
 }

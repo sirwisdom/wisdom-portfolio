@@ -1,8 +1,9 @@
 @import "config";
 @import "menu";
 @import "contact";
-@import "mediaQueries";
 @import "about";
+@import "portfolio";
+@import "footer";
 
 #bg-image {
   background: linear-gradient(
@@ -90,3 +91,5 @@ main {
     }
   }
 }
+
+@import "mediaQueries";

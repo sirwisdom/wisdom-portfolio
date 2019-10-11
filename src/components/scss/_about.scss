@@ -1,5 +1,5 @@
 .about-section {
-  margin-top: 5vh;
+  margin-top: 10vh;
   h1 {
     text-transform: uppercase;
     font-size: 3rem;
@@ -10,48 +10,72 @@
   h3 {
     margin-bottom: 7px;
     padding: 3px 5px;
+    font-weight: 300;
+  }
+}
+.about-div {
+  min-height: 100vh - 40vh;
+  padding: 8px;
+  margin-top: 25px;
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas: "bio-image bio bio" "work01 work02 work03";
+  grid-template-columns: repeat(3, 1fr);
+
+  .bio-image {
+    grid-area: bio-image;
+    margin: 0 auto;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 2px solid rgba($tertiaryColor, 0.5);
   }
 
-  .about-div {
-    margin-top: 5px;
-    display: grid;
-    grid-template-areas: "about-portrait bio bio" "work01 work02 work03";
-    grid-template-columns: repeat(3, 1fr);
+  .bio {
+    grid-area: bio;
+    font-size: 1.1rem;
+    font-weight: 300;
+    line-height: 1.6rem;
+    padding: 4px;
 
-    .about-portrait {
-      grid-area: about-portrait;
-      margin: auto;
-      .bio-image {
-        margin: auto;
-        width: 250px;
-        height: 250px;
-        border-radius: 50%;
-        border: 3px solid $tertiaryColor;
-      }
+    h3 {
+      font-size: 2.6rem;
+      font-weight: 400;
     }
-    .bio {
-      grid-area: bio;
-      font-size: 1.1rem;
-    }
-    #work01 {
-      grid-area: work01;
-    }
-    #work02 {
-      grid-area: work02;
-    }
-    #work03 {
-      grid-area: work03;
-    }
+  }
+  #work01 {
+    grid-area: work01;
+  }
+  #work02 {
+    grid-area: work02;
+  }
+  #work03 {
+    grid-area: work03;
   }
 }
 
 .work {
   padding: 5px;
-  margin: 2px;
-  background: lighten($color: $primaryColor, $amount: 1);
+  margin: 3px;
+  background: lighten($color: $primaryColor, $amount: 2);
+  border-bottom: 2px solid rgba($tertiaryColor, 0.2);
   h5 {
-    font-size: 20px;
-    font-weight: 200px;
+    font-size: 24px;
+    font-weight: 400;
     color: $tertiaryColor;
+    padding: 5px;
+    margin: 2px;
+  }
+
+  h6 {
+    font-size: 18px;
+    font-weight: 200;
+    padding: 5px;
+    margin: 2px;
+  }
+
+  p {
+    line-height: 1.6rem;
+    font-weight: 200;
   }
 }
